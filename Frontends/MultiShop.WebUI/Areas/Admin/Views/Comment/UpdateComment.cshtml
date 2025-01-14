@@ -1,0 +1,108 @@
+﻿@model UpdateCommentDto
+@{
+    ViewData["Title"] = "UpdateComment";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<style>
+
+    .rate {
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end
+    }
+
+        .rating > input {
+            display: none
+        }
+
+        .rating > label {
+            position: relative;
+            width: 1em;
+            font-size: 30px;
+            font-weight: 300;
+            color: #FFD600;
+            cursor: pointer
+        }
+
+            .rating > label::before {
+                content: "\2605";
+                position: absolute;
+                opacity: 0
+            }
+
+            .rating > label:hover:before,
+            .rating > label:hover ~ label:before {
+                opacity: 1 !important
+            }
+
+        .rating > input:checked ~ label:before {
+            opacity: 1
+        }
+
+        .rating:hover > input:checked ~ label:before {
+            opacity: 0.4
+        }
+
+    .buttons {
+        top: 36px;
+        position: relative
+    }
+
+    .rating-submit {
+        border-radius: 8px;
+        color: #fff;
+        height: auto
+    }
+
+        .rating-submit:hover {
+            color: #fff
+        }
+</style>
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Yorum Guncelleme Sayfasi</h4>
+                <br />
+                <form method="post" >
+
+                    <input type="hidden" asp-for="UserCommentId" class="form-control" placeholder="Kategori Adı Giriniz" />
+                    <input type="hidden" asp-for="ProductId" class="form-control" placeholder="Kategori Adı Giriniz" />
+                    <br />
+                    <label>Kullanıcı Adı Soyadı</label>
+                    <input type="text" asp-for="NameSurname" class="form-control" placeholder="Kategori Adı Giriniz" />
+                    <br />
+                    <label>Kullanıcı Görsel</label>
+                    <input type="text" asp-for="ImageUrl" class="form-control" placeholder="Kategori Görsel Giriniz" />
+                    <br />
+                    <label>Kullanıcı Email</label>
+                    <input type="text" asp-for="Email" class="form-control" placeholder="Kategori Görsel Giriniz" />
+                    <br />
+                    <label>Kullanıcı Puanı</label>
+                    <div class=" text-left mb-5 ">
+                        <div class="rating"> <input type="radio" asp-for="Rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+                    </div>
+                    <br />
+                    <label>Kullanıcı Email</label>
+                    <input type="text" asp-for="Email" class="form-control" placeholder="Kategori Görsel Giriniz" />
+                    <br />
+                    <label>Kullanıcı Tarihi</label>
+                    <input id="datepicker" class="form-control" asp-for="CommentCreateDate" />
+                    <br />
+                    <label>Kullanıcı Yorum</label>
+                    <textarea asp-for="CommentDetail" class="form-control" rows="3"></textarea>
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">Yorum Güncelleme</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+

@@ -1,5 +1,6 @@
 ﻿using MultiShop.Catalog.Services.AboutService;
 using MultiShop.Catalog.Services.CategoryServices;
+using MultiShop.Catalog.Services.ContactService;
 using MultiShop.Catalog.Services.FeaturesSLiderService;
 using MultiShop.Catalog.Services.ProductDetailServices;
 using MultiShop.Catalog.Services.ProductImageImageServices;
@@ -20,6 +21,7 @@ namespace MultiShop.Catalog.Extension
             services.AddScoped<IFeaturesSliderService, FeatureSliderServices>();
             services.AddScoped<ISpecialOffterService, SpecialOffterService>();
             services.AddScoped<IAboutService, AboutService>();
+            services.AddScoped<IContactService, ContactService>();
 
         }
     }
