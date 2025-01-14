@@ -1,0 +1,55 @@
+﻿@model UpdateProductDto
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<!-- Main content -->
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Ürün Ekleme Sayfası</h4>
+                <br />
+                <form method="post" action="">
+                    <input type="hidden" asp-for="ProductId" />
+                    <label>Ürün Adı</label>
+                    <input type="text" asp-for="ProductName" class="form-control" placeholder="Ürün Adı Giriniz" />
+                    <br />
+                    <label>Ürün Fiyatı</label>
+                    <input type="text" asp-for="ProductPrice" class="form-control" placeholder="Ürün Fiyatı" />
+                    <br />
+                    <label>Ürün Ürün Görseli</label>
+                    <input type="text" asp-for="ProductImageUrl" class="form-control" placeholder="Ürün Yolu Seçiniz" />
+                    <br />
+                    <label>Ürün Kategorisi</label>
+                    <select class="form-select form-control" asp-for="CategoryId" style="height:45px !important;" aria-label="Default select example">
+
+                        <option >Kategori Seçiniz</option>
+                        @foreach (var item in Model.CategoryDtos)
+                        {
+                            
+                            if (item.CategoryId == Model.CategoryId)
+                            {
+                                <option selected value="@item.CategoryId">@item.CategoryName</option>
+                            }
+                            else if (item.CategoryId != Model.CategoryId)
+                            {
+                                <option value="@item.CategoryId">@item.CategoryName</option>
+
+                            }
+                        }
+                    </select>
+                    <br />
+                    <div class="form-floating">
+                        <label>Ürün Açıklaması</label>
+                        <textarea class="form-control" asp-for="ProductDescription" placeholder="Ürün Açıklaması Giriniz." id="floatingTextarea"></textarea>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">Ürünü Güncelle </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- content -->

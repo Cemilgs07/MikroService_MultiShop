@@ -1,0 +1,32 @@
+﻿@model UpdateSpecialOfterDto
+@{
+    ViewData["Title"] = "UpdateSpecialOffter";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- Main content -->
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>İndirim Guncelleme Sayfası</h4>
+                <br />
+                <form method="post" action="/Admin/SpecialOffter/UpdateSpecialOftter">
+                    <input type="hidden" asp-for="SpecialOffterId" />
+                    <label>İndirim Başlığı</label>
+                    <input type="text" asp-for="Title" class="form-control" value="@Model.Title" placeholder="İndirim Başlık Giriniz" />
+                    <br />
+                    <label>İndirim İkinci Başlık</label>
+                    <input type="text" asp-for="subTitle" class="form-control" value="@Model.subTitle" placeholder="İndirim İkinci Başlık Fiyatı" />
+                    <br />
+                    <label>İndirim Resim Yolu</label>
+                    <input type="text" asp-for="ImageUrl" class="form-control" value="@Model.ImageUrl" placeholder="İndirim İkinci Başlık Fiyatı" />
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">İndirimi Güncelle </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- content -->

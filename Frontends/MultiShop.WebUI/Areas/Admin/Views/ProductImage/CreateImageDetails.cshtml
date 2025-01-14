@@ -1,0 +1,33 @@
+﻿@model CreateProductImageDto
+@{
+    ViewData["Title"] = "CreateImageDetails";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Ürün Foto Guncelleme Sayfası</h4>
+                <br />
+                <form method="post" action="/Admin/ProductImage/CreateImageDetails">
+                    <input type="hidden" value="@Model.ProductId" asp-for="ProductId" />
+                    <label>Ürün Gorsel 1</label>
+                    <input type="text" asp-for="Image1" class="form-control" placeholder="Ürün Adı Giriniz" />
+                    <br />
+                    <label>Ürün Gorsel 2</label>
+                    <input type="text" asp-for="Image2"  class="form-control" placeholder="Ürün Fiyatı" />
+                    <br />
+                    <label>Ürün Ürün Gorsel 3</label>
+                    <input type="text" asp-for="Image3"  class="form-control" placeholder="Ürün Yolu Seçiniz" />
+                    <br />
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">Ürünü Foto Ekle </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- content -->
+

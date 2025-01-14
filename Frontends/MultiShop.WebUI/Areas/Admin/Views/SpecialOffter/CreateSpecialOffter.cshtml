@@ -1,0 +1,31 @@
+﻿@model CreateSpecialOfterDto
+@{
+    ViewData["Title"] = "CreateSpecialOffter";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- Main content -->
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>İndirim Ekleme Sayfası</h4>
+                <br />
+                <form method="post" action="/Admin/SpecialOffter">
+                    <label>İndirim Başlığı</label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="İndirim İkinci Giriniz" />
+                    <br />
+                    <label>İndirim İkinci</label>
+                    <input type="text" asp-for="subTitle" class="form-control" placeholder="İndirim İkinci" />
+                    <br />
+                    <label>İndirim Resim Yolu</label>
+                    <input type="text" asp-for="ImageUrl" class="form-control" placeholder="İndirim Resim Yolu Seçiniz" />
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">İndirim  Ekle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- content -->

@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_AdminLayoutHeadComponentPartial")
+
+<body class="sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        @await Component.InvokeAsync("_AdminLayoutHeaderComponentPartial")
+
+        <!-- Left side column. contains the logo and sidebar -->
+        @await Component.InvokeAsync("_AdminLayoutSiderBarComponentPartial")
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            @await Component.InvokeAsync("_AdminLayoutMainSectionComponentPartial")
+                        <!-- Main content -->
+          @RenderBody()
+            <!-- content -->
+        </div>
+        <!-- content-wrapper -->
+        <!-- Main Footer -->
+        @await Component.InvokeAsync("_AdminLayoutFooterViewComponentPartial")
+    </div>
+    <!-- wrapper -->
+    <!-- jQuery -->
+    <script src="~/MainDownload/html/dist/js/jquery.min.js"></script>
+    <script src="~/MainDownload/html/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/MainDownload/html/dist/js/ovio.js"></script>
+</body>
+</html>

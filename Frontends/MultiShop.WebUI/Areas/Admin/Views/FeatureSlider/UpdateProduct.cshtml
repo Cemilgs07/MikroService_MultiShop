@@ -1,0 +1,39 @@
+﻿@model UpdateFeatureSliderDto
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Öne Çıkan Düzenleme Sayfası</h4>
+                <br />
+                <form method="post">
+                    <input type="hidden" asp-for="FeaturesSliderId" class="form-control"  placeholder="Öne çıkan Adı Giriniz" />
+
+                    <label>Başlık</label>
+                    <input type="text" asp-for="Title" class="form-control" value="@Model.Title" placeholder="Öne çıkan Adı Giriniz" />
+                    <br />
+                    <label>Açıklama</label>
+                    <input type="text" asp-for="Description" class="form-control" value="@Model.Description" placeholder="Öne çıkan Adı Giriniz" />
+                    <label>Resim Yolu</label>
+                    <br />
+                    <input type="text" asp-for="ImageUrl" class="form-control" value="@Model.ImageUrl" placeholder="Öne çıkan Adı Giriniz" />
+                    <label>Durumu</label>
+                    <br />
+                    <select class="form-select form-control" style="height:45px !important;" aria-label="Default select example" asp-for="Status">
+                        <option selected>Lütfen Durum Seçiniz</option>
+                        <option value="0">Pasif</option>
+                        <option value="1">Aktif</option>
+                    </select>
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">Öne Çıkanı Guncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- content -->

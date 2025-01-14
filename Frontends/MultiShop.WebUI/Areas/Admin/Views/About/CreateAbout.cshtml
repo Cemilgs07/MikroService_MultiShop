@@ -1,0 +1,34 @@
+﻿@model CreateAboutDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>KAtegori EklemeSayfası</h4>
+                <br />
+
+                <form method="post" action="/Admin/About/CreateAbout">
+                    <label>Hakkımda Açıklama</label>
+                    <input type="text" asp-for="Description"  class="form-control" placeholder="Kategori Adı Giriniz" />
+                    <br />
+                    <label>Adres</label>
+                    <input type="text" asp-for="Adres" class="form-control"  placeholder="Kategori Görsel Giriniz" />
+                    <br />
+                    <label>Email</label>
+                    <input type="text" asp-for="Email" class="form-control" placeholder="Kategori Görsel Giriniz" />
+                    <br />
+                    <label>Telefon Numarası</label>
+                    <input type="text" asp-for="Phone" class="form-control" placeholder="Kategori Görsel Giriniz" />
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">Hakkımda Ekle</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

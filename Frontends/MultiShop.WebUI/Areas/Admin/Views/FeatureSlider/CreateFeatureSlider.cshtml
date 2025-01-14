@@ -1,0 +1,39 @@
+﻿@model CreateFeatureSliderDto
+@{
+    ViewData["Title"] = "CreateFeatureSlider";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- Main content -->
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chart-box">
+                <h4>Öne Çıkan Ekleme Sayfası</h4>
+                <br />
+
+                <form method="post">
+                    <label>Başlık</label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="Kategori Adı Giriniz" />
+                    <br />
+                    <label>Açıklama</label>
+                    <input type="text" asp-for="Description" class="form-control" placeholder="Kategori Adı Giriniz" />
+                    <label>Resim Yolu</label>
+                    <br />
+                    <input type="text" asp-for="ImageUrl" class="form-control"  placeholder="Kategori Adı Giriniz" />
+                    <label>Durumu</label>
+                    <br />
+                    <select class="form-select form-control" aria-label="Default select example" style="height:45px!important ;" asp-for="Status">
+                        <option selected>Lütfen Durum Seçiniz</option>
+                        <option value="0">Pasif</option>
+                        <option value="1">Aktif</option>
+                    </select>
+                    <br />
+                    <button type="submit" class="btn btn-primary mt-3">Öne Çıkan Ekle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- content -->
