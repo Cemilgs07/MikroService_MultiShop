@@ -36,8 +36,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{B6AF167B-CBC2-4EC8-B9BF-88D0AE759810}"
 	ProjectSection(SolutionItems) = preProject
 		IdentiyServerSolutionVersionEror.txt = IdentiyServerSolutionVersionEror.txt
+		OcelotLink.txt = OcelotLink.txt
 		PortainerCmd.txt = PortainerCmd.txt
 		PortNumbers.txt = PortNumbers.txt
+		UserExample.txt = UserExample.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{82E73D4D-9479-4C5B-BEA6-E3B352EE9C90}"
@@ -64,7 +66,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.DtoLayer", "Front
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comment", "Comment", "{BF88B2D2-C2F3-49AE-B5C5-94D09A5676A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Comment", "Services\Comment\MultiShop.Comment\MultiShop.Comment.csproj", "{D605A5F8-0363-414C-B9C7-310BE5FE4BC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Comment", "Services\Comment\MultiShop.Comment\MultiShop.Comment.csproj", "{D605A5F8-0363-414C-B9C7-310BE5FE4BC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{4C062E61-13D1-400C-B501-724F1BECC260}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{14349569-3B7B-4233-BC50-7067348D8F24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.ApiGateway", "ApiGateway\MultiShop.ApiGateway\MultiShop.ApiGateway.csproj", "{2ADA2F76-CBC9-417C-9956-7B4F214DE098}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{37634643-2F40-443B-AB79-2667C6237290}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Payment", "Services\Payment\MultiShop.Payment\MultiShop.Payment.csproj", "{A0EBD208-09C2-4B8E-A4BB-567C9D0F6D1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{2D91A494-00FA-4E23-8B7A-6789AFD240B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSop.Images", "Services\Images\MultiSop.Images\MultiSop.Images.csproj", "{7FC87697-76D0-4FEF-80E1-C34F9B8ACFD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -136,6 +152,18 @@ Global
 		{D605A5F8-0363-414C-B9C7-310BE5FE4BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D605A5F8-0363-414C-B9C7-310BE5FE4BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D605A5F8-0363-414C-B9C7-310BE5FE4BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADA2F76-CBC9-417C-9956-7B4F214DE098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADA2F76-CBC9-417C-9956-7B4F214DE098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADA2F76-CBC9-417C-9956-7B4F214DE098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADA2F76-CBC9-417C-9956-7B4F214DE098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0EBD208-09C2-4B8E-A4BB-567C9D0F6D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0EBD208-09C2-4B8E-A4BB-567C9D0F6D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0EBD208-09C2-4B8E-A4BB-567C9D0F6D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0EBD208-09C2-4B8E-A4BB-567C9D0F6D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FC87697-76D0-4FEF-80E1-C34F9B8ACFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FC87697-76D0-4FEF-80E1-C34F9B8ACFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FC87697-76D0-4FEF-80E1-C34F9B8ACFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FC87697-76D0-4FEF-80E1-C34F9B8ACFD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -166,6 +194,11 @@ Global
 		{55413EFD-73AB-47B4-81BC-A42A61CEEEAB} = {591F8746-D491-45FA-A092-CDCE30F2DB59}
 		{BF88B2D2-C2F3-49AE-B5C5-94D09A5676A0} = {021EF150-B2CF-4050-87C1-11C961DC5BAE}
 		{D605A5F8-0363-414C-B9C7-310BE5FE4BC3} = {BF88B2D2-C2F3-49AE-B5C5-94D09A5676A0}
+		{2ADA2F76-CBC9-417C-9956-7B4F214DE098} = {4C062E61-13D1-400C-B501-724F1BECC260}
+		{37634643-2F40-443B-AB79-2667C6237290} = {021EF150-B2CF-4050-87C1-11C961DC5BAE}
+		{A0EBD208-09C2-4B8E-A4BB-567C9D0F6D1D} = {37634643-2F40-443B-AB79-2667C6237290}
+		{2D91A494-00FA-4E23-8B7A-6789AFD240B3} = {021EF150-B2CF-4050-87C1-11C961DC5BAE}
+		{7FC87697-76D0-4FEF-80E1-C34F9B8ACFD0} = {2D91A494-00FA-4E23-8B7A-6789AFD240B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8698FEC8-40EC-4F93-AB95-BFD1034C86E3}

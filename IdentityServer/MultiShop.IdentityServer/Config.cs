@@ -58,8 +58,8 @@ namespace MultiShop.IdentityServer
                 ClientName = "MultiShop Visitor User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = { new Secret("MultiShopSecret".Sha256()) },
-                AllowedScopes = { "DiscountFullPermission" }
-            },
+				AllowedScopes = { "CatalogFullPermission", "CatalogReadPermission" }
+			},
             // Manager
             new Client
             {
@@ -67,8 +67,9 @@ namespace MultiShop.IdentityServer
                 ClientName = "MultiShop Manager User",
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 ClientSecrets = { new Secret("MultiShopSecret".Sha256()) },
-                AllowedScopes = { "CatalogFullPermission", "CatalogReadPermission" }
-            },
+                AllowedScopes = { "CatalogFullPermission", "CatalogReadPermission", "BasketFullPermission",
+ }
+			},
             // Admin
             new Client
             {

@@ -5,8 +5,8 @@ using MultiShop.Catalog.Services.FeaturesSLiderService;
 
 namespace MultiShop.Catalog.Controllers
 {
-    [AllowAnonymous]
-    [Route("api/[controller]")]
+	[Authorize]
+	[Route("api/[controller]")]
     [ApiController]
     public class FeaturesSliderController : ControllerBase
     {
